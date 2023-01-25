@@ -16,7 +16,7 @@ class PortafolioController extends Controller
     {
         $proyectos = Proyecto::paginate();
 
-        return view('proyecto.index', compact('proyectos'))
+        return view('welcome', compact('proyectos'))
             ->with('i', (request()->input('page', 1) - 1) * $proyectos->perPage());
     }
 }
