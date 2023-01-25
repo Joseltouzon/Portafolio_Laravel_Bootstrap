@@ -33,7 +33,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('proyectos.index') }}">{{ __('Proyectos') }}</a>
+                                </li>
+                            @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->

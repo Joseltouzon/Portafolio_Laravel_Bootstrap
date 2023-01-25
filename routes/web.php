@@ -20,6 +20,6 @@ Auth::routes();
 
 Route::resource('/proyectos', App\Http\Controllers\ProyectoController::class);
 
-Auth::routes();
+Auth::routes(['register' => false, 'reset' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
